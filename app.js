@@ -1,8 +1,9 @@
 const path = require("node:path");
 const express = require("express");
 const indexRouter = require("./routes/indexRouter");
+require("dotenv").config();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const viewsPath = path.join(__dirname, "views");
 const staticFilesPath = path.join(__dirname, "public");
