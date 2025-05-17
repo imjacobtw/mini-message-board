@@ -1,0 +1,22 @@
+<%- include("header", { title: title }) %>
+
+<div id="form-section-wrapper">
+  <section id="form-section">
+    <h1>Create a Message</h1>
+    <p>
+      To add your own ideas to the message board, please enter your name and the
+      message below.
+    </p>
+    <form method="POST" action="/new">
+      <label for="user">Your Name</label>
+      <input name="user" />
+
+      <label for="text">Message Text</label>
+      <input name="text" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</div>
+
+<%- include("footer") %>

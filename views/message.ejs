@@ -1,0 +1,14 @@
+<%- include("header", { title: title }) %>
+<%- include("navigationBar") %>
+
+<div id="message-section-wrapper">
+  <section>
+    <div>
+      <p>Posted by <%= message.user %></p>
+      <p>Created on <%= message.added.toDateString() %></p>
+    </div>
+    <p><%= message.text %></p>
+  </section>
+</div>
+
+<%- include("footer") %>

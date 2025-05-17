@@ -1,0 +1,16 @@
+<%- include("header", { title: title }) %>
+<%- include("navigationBar") %>
+
+<section id="messages-grid">
+  <% for (let i = 0; i < messages.length; i++) { %>
+    <a class="message-grid-item" href="/message/<%= i %>">
+      <p><%= messages[i].text %></p>
+      <div>
+        <p><%= messages[i].user %></p>
+        <p><%= messages[i].added.toDateString() %></p>
+      </div>
+    </a>
+  <% } %>
+</section>
+
+<%- include("footer") %>
